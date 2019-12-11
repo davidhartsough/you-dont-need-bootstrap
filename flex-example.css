@@ -1,0 +1,61 @@
+/* Layout */
+.flex {
+  display: flex;
+}
+.ex-layout,
+.center {
+  margin: 1rem auto;
+  max-width: 480px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+.ex-header {
+  background-color: rgba(250, 0, 0, 0.2);
+}
+.ex-nav {
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(250, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+.ex-link {
+  margin-left: 0.5rem;
+}
+.ex-title {
+  text-align: center;
+  padding: 0.5rem;
+}
+.ex-aside {
+  flex: 0 0 25%;
+  padding: 0.5rem;
+  background-color: rgba(0, 250, 0, 0.2);
+}
+.ex-section {
+  flex: 1 1 auto;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 250, 0.2);
+}
+.ex-side {
+  flex: 0 0 20%;
+  padding: 0.25rem;
+  background-color: rgba(0, 250, 250, 0.1);
+}
+.ex-item {
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
+  background-color: rgba(0, 250, 200, 0.2);
+}
+.ex-footer {
+  background-color: rgba(250, 100, 0, 0.2);
+  text-align: center;
+  padding: 0.5rem;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+}
+.centered {
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(250, 0, 0, 0.2);
+}

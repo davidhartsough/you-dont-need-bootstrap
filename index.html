@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>You don't need Bootstrap</title>
+    <meta
+      name="description"
+      content="Why you might not need any CSS framework: A guide to common, simple styles for almost every website or app."
+    />
+    <meta
+      name="keywords"
+      content="CSS, framework, Bootstrap, need, styling, web, app, website"
+    />
+    <meta name="author" content="David Hartsough" />
+    <link
+      rel="canonical"
+      href="https://davidhartsough.com/you-dont-need-bootstrap"
+    />
+    <meta property="og:title" content="You don't need Bootstrap" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://davidhartsough.com/you-dont-need-bootstrap"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:description"
+      content="Why you might not need any CSS framework: A guide to common, simple styles for almost every website or app."
+    />
+    <meta property="og:site_name" content="You don't need Bootstrap" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "You don't need Bootstrap",
+        "url": "https://davidhartsough.com/you-dont-need-bootstrap",
+        "sameAs": [
+          "https://www.facebook.com/yourprofile",
+          "https://www.linkedin.com/in/yourprofile",
+          "https://plus.google.com/yourprofile"
+        ],
+        "headline": "Why you don't need Bootstrap",
+        "keywords": "CSS, framework, Bootstrap, need, styling, web, app, website",
+        "description": "Why you might not need any CSS framework: A guide to common, simple styles for almost every website or app.",
+        "author": {
+          "@type": "Person",
+          "name": "David Hartsough"
+        }
+      }
+    </script>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="You don't need Bootstrap" />
+    <meta name="theme-color" content="#198bed" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="You don't need Bootstrap"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="./normalize.slim.css" />
+    <link rel="stylesheet" type="text/css" href="./base.css" />
+    <link rel="stylesheet" type="text/css" href="./list.css" />
+    <link rel="stylesheet" type="text/css" href="./button.css" />
+    <link rel="stylesheet" type="text/css" href="./form.css" />
+    <link rel="stylesheet" type="text/css" href="./search.css" />
+    <link rel="stylesheet" type="text/css" href="./card.css" />
+    <link rel="stylesheet" type="text/css" href="./loader.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="stylesheet" type="text/css" href="./flex-example.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="title">You don't need Bootstrap</h1>
+        <p class="subtitle">
+          Why you might not need any CSS framework
+        </p>
+      </header>
+      <section id="style-guide">
+        <h2>A Super Stupid Simple Style Guide</h2>
+        <p>
+          This page has examples of basic components that most websites might
+          use and some simple tips on how to style them without using a
+          full-blown, big ole CSS framework like
+          <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>,
+          <a href="https://materializecss.com/" target="_blank">Materialize</a>,
+          or
+          <a
+            href="https://get.foundation/sites/docs/kitchen-sink.html"
+            target="_blank"
+            >Foundation</a
+          >.
+        </p>
+        <p>
+          See the
+          <a
+            href="https://github.com/davidhartsough/you-dont-need-bootstrap/"
+            target="_blank"
+          >
+            README.md
+          </a>
+          for an in-depth breakdown of the reasoning and the code.
+        </p>
+      </section>
+      <section id="layout">
+        <h2>Layout</h2>
+        <p>AKA Flexbox examples.</p>
+        <div class="ex-layout">
+          <div class="ex-header">
+            <div class="ex-nav flex">
+              <div class="ex-logo">logo</div>
+              <div class="ex-links flex">
+                <div class="ex-link">link</div>
+                <div class="ex-link">link</div>
+                <div class="ex-link">link</div>
+                <div class="ex-link">link</div>
+              </div>
+            </div>
+            <div class="ex-title">title</div>
+          </div>
+          <div class="ex-main flex">
+            <div class="ex-aside">side</div>
+            <div class="ex-section">
+              section
+            </div>
+            <div class="ex-side">
+              <div class="ex-item">item</div>
+              <div class="ex-item">item</div>
+              <div class="ex-item">item</div>
+            </div>
+          </div>
+          <div class="ex-footer">footer</div>
+        </div>
+        <p>
+          Centering an element vertically and horizontally...
+        </p>
+        <div class="flex center">
+          <div class="centered">centered</div>
+        </div>
+      </section>
+      <section id="text">
+        <h2>Typography</h2>
+        <h1>H1 heading</h1>
+        <h2>H2 heading</h2>
+        <h3>H3 heading</h3>
+        <h4>H4 heading</h4>
+        <h5>H5 heading</h5>
+        <p>
+          Paragraph text with an <a href="#text">inline link</a>. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </p>
+        <ul>
+          <li>
+            List item
+            <ol>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+            </ol>
+          </li>
+          <li>
+            List item
+            <ul>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+            </ul>
+          </li>
+          <li>List item</li>
+        </ul>
+        <ol>
+          <li>
+            List item
+            <ol>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+            </ol>
+          </li>
+          <li>
+            List item
+            <ul>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+              <li>Nested list item</li>
+            </ul>
+          </li>
+          <li>List item</li>
+        </ol>
+      </section>
+      <section id="lists">
+        <h2>List groups</h2>
+        <div class="list">
+          <div class="list-item">Large list item 1</div>
+          <div class="list-item">Large list item 2</div>
+          <div class="list-item">Large list item 3</div>
+        </div>
+      </section>
+      <section id="forms">
+        <h2>Forms</h2>
+        <div class="form">
+          <label>
+            Label for input
+            <input type="text" placeholder="Input" />
+          </label>
+          <label>
+            Label for select
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </label>
+          <label>
+            Label for textarea
+            <textarea></textarea>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            Checkbox
+          </label>
+          <div class="buttons">
+            <button>Button</button>
+            <a href="#forms" class="button">Link</a>
+            <button class="primary">Primary</button>
+            <button class="secondary">Secondary</button>
+            <button class="round">Round</button>
+            <button class="round secondary">Combined</button>
+            <button class="primary round icon-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              New
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="search">
+        <h2>Search</h2>
+        <label class="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="search-icon"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="search" placeholder="Search" />
+        </label>
+      </section>
+      <section id="cards">
+        <h2>Cards</h2>
+        <div class="cards">
+          <div class="card">
+            <img class="card-media" src="https://via.placeholder.com/320x180" />
+            <div class="card-content">
+              <h5 class="card-title">Card title</h5>
+              <p>
+                Card text. Basic example of some text content inside a card.
+                Wow, look at this great text.
+              </p>
+              <button class="card-action primary">Card action</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h5 class="card-title">Card title</h5>
+              <p>
+                Card text. Basic example of some text content inside a card.
+                Wow, look at this great text.
+              </p>
+              <a href="#cards" class="card-link">Card link</a>
+              <a href="#cards" class="card-link">Card link</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="loaders">
+        <h2>Loaders / Spinners</h2>
+        <p>AKA loading indicators.</p>
+        <div class="loaders flex">
+          <div class="loader"></div>
+          <div class="spinner"></div>
+          <img src="./spinner.svg" class="fancy-loader" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

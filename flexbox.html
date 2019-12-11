@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flexbox</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        -webkit-text-size-adjust: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Helvetica Neue", Arial, sans-serif;
+        background-color: #fafafa;
+        line-height: 1.5;
+        /* let's flex */
+        display: flex;
+        flex-direction: column;
+      }
+      /* CHANGE THIS */
+      header {
+        background-color: rgba(250, 0, 0, 0.2);
+      }
+      nav {
+        background-color: rgba(250, 0, 0, 0.2);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        list-style: none;
+        margin-left: 0.5rem;
+      }
+      h1 {
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+      }
+      aside {
+        flex: 0 0 25%;
+        background-color: rgba(0, 250, 0, 0.2);
+        flex-direction: column;
+        display: none;
+      }
+      aside > div {
+        padding: 1rem;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+      }
+      .centered {
+        padding: 0.25rem 0.5rem;
+        background-color: rgba(0, 250, 0, 0.2);
+      }
+      section {
+        /*  */
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 250, 0.2);
+      }
+      .side {
+        flex: 0 0 20%;
+        padding: 0.5rem;
+        background-color: rgba(0, 250, 250, 0.1);
+      }
+      .item {
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        background-color: rgba(0, 250, 200, 0.2);
+      }
+      footer {
+        background-color: rgba(250, 100, 0, 0.2);
+        text-align: center;
+        padding: 1rem;
+      }
+      @media screen and (min-width: 480px) {
+        main {
+          flex-direction: row;
+        }
+        aside {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>logo</div>
+        <ul>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+        </ul>
+      </nav>
+      <h1>title</h1>
+    </header>
+    <main>
+      <aside>
+        <div>top</div>
+        <div class="center"><div class="centered">middle</div></div>
+        <div>bottom</div>
+      </aside>
+      <section>
+        section
+      </section>
+      <div class="side">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+      </div>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>

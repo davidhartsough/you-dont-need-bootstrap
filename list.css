@@ -1,0 +1,15 @@
+/* Lists */
+.list {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  margin: 0.75rem 0;
+  overflow: hidden;
+}
+.list-item {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.list-item:last-child {
+  border-bottom: none;
+}

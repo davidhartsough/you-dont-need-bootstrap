@@ -1,0 +1,35 @@
+/* Card */
+.card {
+  flex: 1 0 18rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  max-width: 18rem;
+  margin: 1rem 1rem 0 0;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-media {
+  width: 100%;
+}
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.card-link {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.125rem 0;
+  margin: 0 1rem 0 0;
+  letter-spacing: 0.025rem;
+  display: inline-block;
+}
+.card-link:hover,
+.card-link:focus {
+  text-decoration: none;
+  color: #125ece;
+}
+.card-action {
+  margin: 0.25rem 1rem 0 0;
+}

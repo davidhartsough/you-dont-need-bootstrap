@@ -1,0 +1,19 @@
+/* Search */
+.search {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  top: 0;
+  left: 0.125rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.375rem;
+  margin: 0;
+  line-height: 1;
+  margin: 0;
+  color: #777;
+}
+.search input[type="search"] {
+  padding-left: 2rem;
+}

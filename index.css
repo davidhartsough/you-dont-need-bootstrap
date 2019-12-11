@@ -1,0 +1,40 @@
+main {
+  margin: 0 auto 4rem;
+  max-width: 42rem;
+}
+section {
+  padding: 0 1rem 2rem;
+}
+@media screen and (min-width: 480px) {
+  section {
+    padding: 0 2rem 2rem;
+  }
+}
+header {
+  padding: 3rem;
+  text-align: center;
+}
+.title {
+  line-height: 1.15;
+  font-size: 2.125rem;
+  margin: 0;
+}
+.subtitle {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #444;
+}
+.buttons {
+  margin-top: 1rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.fancy-loader {
+  width: 6rem;
+  height: 6rem;
+  background: #fafafa;
+  display: block;
+}
