@@ -550,11 +550,14 @@ Flexbox is all about having a parent element with `display: flex;` that controls
 ```css
 .flex-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  /* flex-flow: row nowrap; */
+  flex-flow: row nowrap;
+  /*
+  flex-flow is the combination of flex-direction and flex-wrap.
+    flex-direction: row;
+    flex-wrap: nowrap;
+  */
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   align-content: flex-start;
 }
 .flex-item {
@@ -562,6 +565,87 @@ Flexbox is all about having a parent element with `display: flex;` that controls
 }
 ```
 
-// TODO: @David finish this...
-
 See [the flexbox example page](https://davidhartsough.com/you-dont-need-bootstrap/flexbox.html) and [the source code](https://github.com/you-dont-need-bootstrap/blob/master/flexbox.html).
+
+Honestly, for the first few months while I was learning flexbox, I kept going back to this resource time and time again: [CSS Tricks' Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Highly recommend. 10/10 would look at again.
+
+But! I want to convince you that the only CSS you need to learn is all written above ^^. For the flex container (the parent), you need to remember: `flex-flow`, `justify-content`, `align-items`, and (more rarely) `align-content`. (Of course, `display: flex;` as well.) Then for the flex item (the children), you just need to learn the `flex` property. Let's break these down.
+
+#### `flex-flow`
+
+The property `flex-flow` determines the direction of the _main_ axis as either `row` (default) or `column` and then whether or not to wrap the content with `nowrap` (default) or `wrap`.
+
+```css
+.flex-container {
+  /* ... */
+  flex-flow: row nowrap;
+}
+```
+
+(Rarely will you use this, but it's worth mentioning that you can also do the `reverse` of any of these: `row-reverse`, `column-reverse`, and `wrap-reverse`.)
+
+#### `justify-content`
+
+The property `justify-content` determines the alignment and distribution of the flex items along the _main_ axis. If the flex container is a `row`, this property will function like the ole familiar word processor document justification options; by default, it will be left to right (`flex-start`), but you can set the content to be centered (`center`), right to left (`flex-end`), or some variation of what Word would consider "justified" (`space-between`, `space-around`, or `space-evenly`). BUT! Remember that it always is based on the direction of the _main_ axis. If you're using a `column`, then `flex-start` will be top to bottom, while `flex-end` will be bottom to top.
+
+- flex-start (default): items are packed at the start of the flex-direction.
+- flex-end: items are packed at the end of the flex-direction.
+- center: items are packed in the centered.
+- space-between: items are evenly distributed with the first item at the start and the last item on the end.
+- space-around: items are evenly distributed with equal space around them. All the items have equal "margin" on both sides.
+- space-evenly: items are distributed so that the spacing between any two items _and_ the space to the edges is equal.
+
+```css
+.flex-container {
+  /* ... */
+  justify-content: flex-start;
+}
+```
+
+#### `align-items`
+
+The property `align-items` determines the spread of the items along the _cross_ axis. This means that if the flex container is a `row`, `align-items` will set the vertical spread of items (e.g. from top to bottom), whereas a `column` will use `align-items` to distribute the items horizontally (e.g. from left to right). It is a lot like `justify-content`, except it applies to the perpendicular (opposite) axis. Your primary options are:
+
+- stretch (default): fill the container along the cross axis.
+- flex-start: items are aligned at the start of the cross axis.
+- flex-end: items are aligned at the end of the cross axis.
+- center: items are centered in the cross axis
+- baseline: items are aligned along their baselines (used more rarely)
+
+```css
+.flex-container {
+  /* ... */
+  align-items: stretch;
+}
+```
+
+#### `flex`
+
+Finally, the flex items (the children) can configure themselves with their own `flex` property. This property takes three values that determine whether or not the item can grow, whether or not the item can shrink, and what the base size should be (respectively). It is the shorthand combination of `flex-grow`, `flex-shrink`, and `flex-basis` (again, respectively). By default, a flex item will not grow (`0`), will shrink (`1`), and has an automatically determined size (`auto`). To toggle the grow and shrink properties, think of them like booleans: `0` means `false` or "don't do it", and `1` means `true` or "do it". Ex: `flex-grow: 1;` tells the item to grow to fill whatever space it can.
+
+```css
+.flex-item {
+  flex: 0 1 auto;
+  /* This is the shorthand for:
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
+  */
+}
+```
+
+### So what?
+
+WELL! Lemme tell ya! This solves any and all layout problems you can imagine. But my personal favorite is that it can easily solve one of the most notorious problems in web dev styling: perfectly centering a child element inside a parent element both vertically and horizontally. Check this out. So simple!
+
+```css
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+## Boom bop!
+
+That's it! Thank you, come again!
