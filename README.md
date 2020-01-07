@@ -623,6 +623,8 @@ The property `align-items` determines the spread of the items along the _cross_ 
 
 Finally, the flex items (the children) can configure themselves with their own `flex` property. This property takes three values that determine whether or not the item can grow, whether or not the item can shrink, and what the base size should be (respectively). It is the shorthand combination of `flex-grow`, `flex-shrink`, and `flex-basis` (again, respectively). By default, a flex item will not grow (`0`), will shrink (`1`), and has an automatically determined size (`auto`). To toggle the grow and shrink properties, think of them like booleans: `0` means `false` or "don't do it", and `1` means `true` or "do it". Ex: `flex-grow: 1;` tells the item to grow to fill whatever space it can.
 
+The third value, `flex-basis`, tells the item what size it should be when it's not trying to grow or shrink. If you want it to just follow along with your grow and shrink rules, just leave it be with `auto`. But if you want to get specific with sizes, set it to a pixel amount, a percentage, or any other unit of CSS measurement (like `rem`).
+
 ```css
 .flex-item {
   flex: 0 1 auto;
