@@ -28,7 +28,7 @@ I'm going to use this word, "craftsmanship", as an excuse for being rather parti
 
 [Normalize.css](http://necolas.github.io/normalize.css/) (also [see the source on GitHub](https://github.com/necolas/normalize.css))
 
-See [my simplified version of it](https://github.com/you-dont-need-bootstrap/blob/master/normalize.slim.css).
+See [my simplified version of it](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/normalize.slim.css).
 
 ### 2. Intuitive box-sizing
 
@@ -171,7 +171,7 @@ ol ol {
 }
 ```
 
-See [the base.css file](https://github.com/you-dont-need-bootstrap/blob/master/base.css).
+See [the base.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/base.css).
 
 ## Stuff you'll _often_ want
 
@@ -204,7 +204,7 @@ AKA "collections"
 }
 ```
 
-See [the list.css file](https://github.com/you-dont-need-bootstrap/blob/master/list.css).
+See [the list.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/list.css).
 
 ### Buttons
 
@@ -287,7 +287,7 @@ input[type="button"]:focus {
 }
 ```
 
-See [the button.css file](https://github.com/you-dont-need-bootstrap/blob/master/button.css).
+See [the button.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/button.css).
 
 ### Forms
 
@@ -347,7 +347,7 @@ input[type="checkbox"] {
 }
 ```
 
-See [the form.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/form.css).
+See [the form.css file](https://github.com/davidhartsough/davidhartsough/you-dont-need-bootstrap/blob/master/form.css).
 
 ### Search
 
@@ -399,7 +399,7 @@ This demonstration really just shows how to put an icon prefix or postfix in an 
 }
 ```
 
-See [the search.css file](https://github.com/you-dont-need-bootstrap/blob/master/search.css).
+See [the search.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/search.css).
 
 ### Cards
 
@@ -465,7 +465,7 @@ Goes great with this hot cup of cascading styles.
 }
 ```
 
-See [the card.css file](https://github.com/you-dont-need-bootstrap/blob/master/card.css).
+See [the card.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/card.css).
 
 ### Loaders / Spinners
 
@@ -510,7 +510,7 @@ Both the loader and spinner are the same thing, but one has more blue than the o
 }
 ```
 
-See [the loader.css file](https://github.com/you-dont-need-bootstrap/blob/master/loader.css).
+See [the loader.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/loader.css).
 
 Now if you wanna get extra fancy, try out an animated GIF or SVG and just plop that on the screen via an `img` tag.
 
@@ -565,7 +565,7 @@ Flexbox is all about having a parent element with `display: flex;` that controls
 }
 ```
 
-See [the flexbox example page](https://davidhartsough.com/you-dont-need-bootstrap/flexbox.html) and [the source code](https://github.com/you-dont-need-bootstrap/blob/master/flexbox.html).
+See [the flexbox example page](https://davidhartsough.com/davidhartsough/you-dont-need-bootstrap/flexbox.html) and [the source code](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/flexbox.html).
 
 Honestly, for the first few months while I was learning flexbox, I kept going back to this resource time and time again: [CSS Tricks' Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Highly recommend. 10/10 would look at again.
 
