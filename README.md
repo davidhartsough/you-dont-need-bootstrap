@@ -4,7 +4,7 @@
 
 ## When you need it, when you don't
 
-Bootstrap (swept the internet back in blah blah blah and became the most widely used blah blah -- history lesson blah blah). It's extremely popular blah blah. But just because something is extremely popular, doesn't mean that you should blindly assume that you need it in all of you projects. As with all things in life, everything can be great for some purposes but bad at other times. Sometimes a CSS framework is perfect for a project; sometimes it's overkill. The key with learning about new resources is to build up a solid discernment of when those resources are most useful. Every resources serves a particular purpose for particular projects. Trying to _always_ use the same resources in _every_ project is like trying to use a hammer for every home remodeling project. Sometimes you need a screwdriver; sometimes you just need a crowbar. This lesson is aimed at giving you the crowbar basics of the CSS framework hammer. If you're just trying to remove some nails, you don't need the front side of the hammer. With Bootstrap and other CSS frameworks, they give you a rather large toolbox of CSS, HTML, and JS resources. This pool of resources can be overkill for most projects that are relatively small and simple. Let's talk data.
+Bootstrap (swept the internet back in blah blah blah and became the most widely used blah blah — history lesson blah blah). It's extremely popular blah blah. But just because something is extremely popular, doesn't mean that you should blindly assume that you need it in all of your projects. As with all things in life, everything can be great for some purposes but bad at other times. Sometimes a CSS framework is perfect for a project; sometimes it's overkill. The key with learning about new resources is to build up a solid discernment of when those resources are most useful. Every resource serves a particular purpose for particular projects. Trying to _always_ use the same resources in _every_ project is like trying to use a hammer for every home remodeling project. Sometimes you need a screwdriver; sometimes you just need a crowbar. This lesson is aimed at giving you the crowbar basics of the CSS framework hammer. If you're just trying to remove some nails, you don't need the front side of the hammer. With Bootstrap and other CSS frameworks, they give you a rather large toolbox of CSS, HTML, and JS resources. This pool of resources can be overkill for most projects that are relatively small and simple. Let's talk "data".
 
 ### How big?
 
@@ -24,9 +24,11 @@ I'm going to use this word, "craftsmanship", as an excuse for being rather parti
 
 ### 1. Normalize.css
 
-// TODO: @David finish explaining this.
+[Normalize.css](https://necolas.github.io/normalize.css/) (also [see the source on GitHub](https://github.com/necolas/normalize.css))
 
-[Normalize.css](http://necolas.github.io/normalize.css/) (also [see the source on GitHub](https://github.com/necolas/normalize.css))
+> **Normalize.css** makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.
+
+Basically it just ensures that every base HTML element you use will have the same base CSS styles across every browser. So it eliminates most of the dilemma of dealing with different browsers and browser-specific styles. This should go before all your other CSS to provide that perfect blank slate and solid foundation (of knowing what to expect — the more deterministic the better).
 
 See [my simplified version of it](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/normalize.slim.css).
 
@@ -47,9 +49,9 @@ html {
 
 The `body` is where you set the base styles for all other elements to inherit. You'll want to set your basic theme here. Choose a background color and a font (family, size, weight, height, etc).
 
-Try to avoid a stark white background for most websites. It's not easy on the eyes. But fair warning: there's a very fine line between "bland and ugly white" and "grey and gloomy off-white". You'll have to ride those lines and see for yourself. I find that `#FAFAFA` usually does just the trick. It's just one step in the right direction. (It's actually 2% less "light" than pure white, according to it's equivalent HSL value: `hsl(0, 0%, 98%)`.)
+Try to avoid a stark white background for most websites. It's not easy on the eyes. But fair warning: there's a very fine line between "bland and ugly white" and "gray and gloomy off-white". You'll have to ride those lines and see for yourself. I find that `#FAFAFA` usually does just the trick. It's just one step in the right direction. (It's actually 2% less "light" than pure white, according to its equivalent HSL value: `hsl(0, 0%, 98%)`.)
 
-Also, _(personal opinion here)_ serif fonts are lame and for books -- not for websites. It feels weird to see serif on screens. Some say it's technically better/easier for reading, but it's not pretty. If you're website has a lot of written content, maybe consider the best fonts that e-readers have chosen. (I read once that Amazon did research for its Kindle to discover the best typeface for reading. I'll have to revisit that. Maybe you'll find what I'm talking about. But follow the research.) Otherwise, if you're website has minimal sections of written content and rarely has lengthy paragraphs and paragraphs of text, then go for what's more aesthetically pleasing: `sans-serif`.
+Also, _(personal opinion here)_ serif fonts are lame and for books — not for websites. It feels weird to see serif fonts on screens. Some say it's technically better/easier for reading, but it's not pretty. If your website has a lot of written content, maybe consider the best fonts that e-readers have chosen. (I read once that Amazon did research for its Kindle to discover the best typeface for reading. I'll have to revisit that. Maybe you'll find what I'm talking about. But follow the research.) Otherwise, if your website has minimal sections of written content and rarely has lengthy paragraphs and paragraphs of text, then go for what's more aesthetically pleasing: `sans-serif`.
 
 In fact, most operating systems default to a sans-serif font for everything. You should probably keep your website's font aligned with the device's default font, to keep things consistent. To do this, you'll actually want to target all the best sans-serif fonts from every device, in the order of coolest, best-looking, and most-likely-to-override-anyway. This ensures that you'll get the best sans-serif font on every device. For example, if you just chose "Roboto" (the sexiest of fonts), your website would have access to it on Android devices but wouldn't have access to it on iOS devices, so you'd have to manually import it from Google fonts. If you list all the defaults instead, the device will automatically choose its best sans-serif font for you, based on what it already has available (system fonts).
 
@@ -94,7 +96,7 @@ main {
 
 ### 4. CSS for `section`
 
-I prefer to wrap my content in a section element inside my main element. Again, it's just semantics for me -- use whatever you wish.
+I prefer to wrap my content in a section element inside my main element. Again, it's just semantics for me — use whatever you wish.
 
 Since we did away with the `body`'s default `margin: 10px`, we need to bring that space back here so you don't have your content butting up against the edge of the screen. Personally, I like to add about `1rem` of `padding` for smaller screens, while I have `2rem` for larger screens, because mobile devices (phones) can't always afford to be as liberal with their spacing (when there's limited room to fit the content on the screen). Hence why you see the media query with a breakpoint.
 
@@ -177,9 +179,11 @@ See [the base.css file](https://github.com/davidhartsough/you-dont-need-bootstra
 
 Before diving totally into different types of common "components", I wanna touch on picking a "theme" real quick:
 
-In the section above, I made all `a` tags the color `#146eeb`. That's just a nice blue I've picked out for myself. You can pick whatever you'd like. Here's how this blue looks. You like?
+In the section above, I made all `a` tags the color `#146eeb`. That's just a nice blue I've picked out for myself. You can pick whatever you'd like. Here's <span style="color: #146eeb">how this blue looks</span>. You like?
 
 <div style="background-color: #146EEB; color: #fff; text-align: center; padding: 1rem; margin: auto; max-width: 100px;">#146EEB</div>
+
+(This doesn't render a blue box on GitHub, but you can check it out on your own.)
 
 ### List groups
 
@@ -347,7 +351,7 @@ input[type="checkbox"] {
 }
 ```
 
-See [the form.css file](https://github.com/davidhartsough/davidhartsough/you-dont-need-bootstrap/blob/master/form.css).
+See [the form.css file](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/form.css).
 
 ### Search
 
@@ -403,7 +407,7 @@ See [the search.css file](https://github.com/davidhartsough/you-dont-need-bootst
 
 ### Cards
 
-Google's _material design_ made these card things super popular, because they are the essence of "paper". (I'm not sure why that's was such a big deal, but I do gotta say I love material design.) Material Design calls for shadows to denote elevation, but I think we can keep things simple and not include any depth to the design.
+Google's _material design_ made these card things super popular, because they are the essence of "paper". (I'm not sure why that was such a big deal, but I gotta say I love material design.) Material Design calls for shadows to denote elevation, but I think we can keep things simple and not include any depth to the design.
 
 "It's a screen. I'm not fooling anyone with 'box-shadows'."
 
@@ -469,7 +473,7 @@ See [the card.css file](https://github.com/davidhartsough/you-dont-need-bootstra
 
 ### Loaders / Spinners
 
-AKA the loading indicator. Every app that makes web requests should use one of these things while awaiting a server response. I find that all my requests awaits responses over an indeterminate amount of time, so I can't use a progress indicator (like a progress bar). The best alternative is a little spinning wheel of some sort. It's the classic, iconic way of denoting "something is happening".
+AKA the loading indicator. Every app that makes web requests should use one of these things while awaiting a server response. I find that all my requests await responses over an indeterminate amount of time, so I can't use a progress indicator (like a progress bar). The best alternative is a little spinning wheel of some sort. It's the classic, iconic way of denoting "something is happening".
 
 The simple spinning circle ones are my favorite. ("Simple is sexy.")
 
@@ -496,7 +500,7 @@ Both the loader and spinner are the same thing, but one has more blue than the o
   animation: spin 1s linear infinite;
 }
 .loader {
-  /* Swap colors: 3/4ths light grey and 1/4th blue */
+  /* Swap colors: 3/4ths light gray and 1/4th blue */
   border: 0.25rem solid #eee;
   border-top: 0.25rem solid #146eeb;
 }
@@ -565,7 +569,7 @@ Flexbox is all about having a parent element with `display: flex;` that controls
 }
 ```
 
-See [the flexbox example page](https://davidhartsough.com/davidhartsough/you-dont-need-bootstrap/flexbox.html) and [the source code](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/flexbox.html).
+See [the flexbox example page](https://davidhartsough.com/you-dont-need-bootstrap/flexbox.html) and [the source code](https://github.com/davidhartsough/you-dont-need-bootstrap/blob/master/flexbox.html).
 
 Honestly, for the first few months while I was learning flexbox, I kept going back to this resource time and time again: [CSS Tricks' Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Highly recommend. 10/10 would look at again.
 
@@ -590,8 +594,8 @@ The property `justify-content` determines the alignment and distribution of the 
 
 - flex-start (default): items are packed at the start of the flex-direction.
 - flex-end: items are packed at the end of the flex-direction.
-- center: items are packed in the centered.
-- space-between: items are evenly distributed with the first item at the start and the last item on the end.
+- center: items are packed in the center.
+- space-between: items are evenly distributed with the first item at the start and the last item at the end.
 - space-around: items are evenly distributed with equal space around them. All the items have equal "margin" on both sides.
 - space-evenly: items are distributed so that the spacing between any two items _and_ the space to the edges is equal.
 
